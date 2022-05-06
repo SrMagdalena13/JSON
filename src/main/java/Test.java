@@ -4,7 +4,7 @@ public class Test {
         String cadenaJSON= " { "+
                 " \"data\": {"+
                 "\"id\": 2,"+
-                "       \"email\": \"janet.weaver@reqres.in\","+
+                "\"email\": \"janet.weaver@reqres.in\","+
                 "\"first_name\": [\"Janet\",\"Brown\"],"+
                 "\"vivo\": \"false\","+
                 "\"avatar\": \"https://reqres.in/img/faces/2-image.jpg\""+
@@ -15,6 +15,8 @@ public class Test {
                 "}"+
                 "}";
         JSONObject jo = new JSONObject(/*"{ 'abc' : 'def' }"*/ cadenaJSON);
-        System.out.println(jo.toString());
+        String correo =  jo.getJSONObject("data").getString("email");
+        /*System.out.println(jo.toString());*/
+        System.out.println(correo);
     }
 }
