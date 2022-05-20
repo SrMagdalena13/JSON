@@ -60,14 +60,16 @@ public class EjemploParse {
     }
     // Método que parsea el cuerpo del URI y devuelve la información que se le pide
     private static void parseBody(String body) {
-        String cadenaJSON = "";
+        String cadenaJSON = body;
         JSONObject obj = new JSONObject(cadenaJSON);
-        String vivo = obj.getJSONObject("pageInfo").getString("pageName");
-        JSONArray arr = obj.getJSONArray("posts");
+        String titulo = obj.getString("title");
+        System.out.println(titulo);
+        /*String vivo = obj.getJSONObject("pageInfo").getString("pageName");*/
+        /*JSONArray arr = obj.getJSONArray("posts");
         for (int i = 0; i < arr.length(); i++) {
             String post_id = arr.getJSONObject(i).getString("post_id");
             System.out.println(post_id);
         }
-        System.out.println(vivo);
+        System.out.println(vivo);*/
     }
 }
