@@ -62,7 +62,7 @@ public class EjemploParse {
     private static void parseBody(String body) {
         String cadenaJSON = body;
         JSONObject obj = new JSONObject(cadenaJSON);
-        String titulo = obj.getString("title");
+        String titulo = obj.getString("title ");
         System.out.println(titulo);
         /*String vivo = obj.getJSONObject("pageInfo").getString("pageName");*/
         /*JSONArray arr = obj.getJSONArray("posts");
